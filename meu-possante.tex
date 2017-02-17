@@ -4,6 +4,7 @@
 \usepackage{graphicx,url}
 \usepackage[portuguese]{babel}
 \usepackage[utf8]{inputenc}
+\usepackage[alf]{abntcite}
 
 \urlstyle{rm}
 
@@ -33,7 +34,7 @@
 \end{abstract}
 
 \begin{resumo}
-    Este artigo propõe um Sistema de Apoio a Decisão (SAD) no formato de um
+    Este artigo propõe um Sistema de Apoio à Decisão (SAD) no formato de um
     aplicativo para celulares na área de mecânica automotiva para pessoas leigas
     no assunto. Aqui são apresentados e discutidos as variáveis utilizadas no
     aplicativo, os tipos de Sistema de Informação (SI) e SAD nos quais ele se
@@ -61,19 +62,50 @@ visualmente quando alguma manutenção está próxima.
 
 \section{Referencial Teórico} \label{sec:referencialteorico}
 Esta seção aborda os principais fundamentos teóricos envolvidos na notificação
-oportuna de motoristas, tema central deste trabalho. Aqui são discutidos X Y e Z.
+oportuna de motoristas, tema central deste trabalho. Aqui são discutidos os
+conceitos de SI e SAD e os principais fatores que influenciam na manutenção
+automotiva.
 
+\subsection{Sistemas de Informação e Sistemas de Apoio à Decisão}\label{sec:sisad}
+Segundo \citeonline{guimaraes2004sistema}, Sistemas de Informação podem ser definidos
+como todo conjunto de dados e informações que são organizados de forma
+integrada, com o objetivo de atender à demanda e antecipar as necessidades dos
+usuários.
+
+Segundo \citeonline{falsarella2004sistemas} os Sistemas de Informação podem ser
+separados em cinco categorias:
+
+\begin{itemize}
+    \item Sistemas Transacionais
+    \item Sistemas Gerenciais
+    \item Sistemas Executivos
+    \item Sistemas Especialistas
+    \item Sistemas de Apoio à Decisão
+\end{itemize}
+
+Os Sistemas de Apoio à Decisão, como definidos por \citeonline{o2001sistemas},
+são sistemas de informação computadorizados que fornecem aos gerentes apoio
+interativo de informações durante o processo de tomada de decisão.
+
+Segundo Bonczek, Holsapple e Whinston citados por \citeonline{neto2000modelo},
+O SAD tem seu foco no gerenciamento com ênfase na flexibilidade e capacidade de
+fornecer respostas rápidas, podendo ser iniciado e controlado pelo responsável
+da tomada de decisões. Seus objetivos gerais são melhorar a eficácia, ou
+qualidade, da decisão e eficiência do processo de tomada de decisão em nível de
+planejamento e gerência.
+
+\subsection{Manutenção Automotiva}\label{sec:manutencao}
 Para descobrir quais são os principais fatores que influenciam na frequência de
 manutenção de automóveis, foi feita uma busca nos manuais dos carros mais vendidos
 no Brasil em 2016 que, segundo a Federação Nacional da Distribuição de Veículos
 Automotores - Fenabrave - foram o Hyundai HB20, Chevrolet Onix e Ford Ka Hatch
 \cite{fenabrave}.
 
-Todos os manuais citam três fatores importantes que influenciam na frequência
-de manutenção de peças veiculares: a quilometragem do veículo, o tempo desde sua
-última revisão e suas condições de uso. \cite{manualhyundai, manualonix, manualka}
-A severidade das condições de uso de um veículo é definida pelos seguintes
-fatores:
+Todos os manuais pesquisados citam três fatores importantes que influenciam na
+frequência de manutenção de peças veiculares: a quilometragem do veículo, o
+tempo desde sua última revisão e suas condições de uso \cite{manualhyundai,
+manualonix, manualka}. De acordo com os manuais, a severidade das condições de
+uso de um veículo é definida pelos seguintes fatores:
 
 \begin{itemize}
   \item Funcionamento constante em tráfego urbano lento com paradas e partidas
@@ -88,12 +120,16 @@ fatores:
   dias.
 \end{itemize}
 
+Quando há uma ou mais condições severas presentes no uso de um veículo, a
+manutenção nas peças deve ser feita com mais frequência, geralmente na metade do
+tempo da troca normal.
+
 \section{Algoritmos Utilizados} \label{sec:algoritmos}
 
 
 \section{Modelagem do Sistema} \label{sec:modelagem}
 
 \bibliography{meu-possante}
-\bibliographystyle{sbc}
+%\bibliographystyle{sbc}
 
 \end{document}
