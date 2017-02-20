@@ -66,7 +66,7 @@ oportuna de motoristas, tema central deste trabalho. Aqui são discutidos os
 conceitos de SI e SAD e os principais fatores que influenciam na manutenção
 automotiva.
 
-\subsection{Sistemas de Informação e Sistemas de Apoio à Decisão}\label{sec:sisad}
+\subsection{Sistemas de Informação e Sistemas de Apoio à Decisão} \label{sec:sisad}
 Segundo \citeonline{guimaraes2004sistema}, Sistemas de Informação podem ser definidos
 como todo conjunto de dados e informações que são organizados de forma
 integrada, com o objetivo de atender à demanda e antecipar as necessidades dos
@@ -87,8 +87,8 @@ Os Sistemas de Apoio à Decisão, como definidos por \citeonline{o2001sistemas},
 são sistemas de informação computadorizados que fornecem aos gerentes apoio
 interativo de informações durante o processo de tomada de decisão.
 
-Segundo Bonczek, Holsapple e Whinston citados por \citeonline{neto2000modelo},
-O SAD tem seu foco no gerenciamento com ênfase na flexibilidade e capacidade de
+Bonczek, Holsapple e Whinston citados por \citeonline{neto2000modelo}, dizem que
+o SAD tem seu foco no gerenciamento com ênfase na flexibilidade e capacidade de
 fornecer respostas rápidas, podendo ser iniciado e controlado pelo responsável
 da tomada de decisões. Seus objetivos gerais são melhorar a eficácia, ou
 qualidade, da decisão e eficiência do processo de tomada de decisão em nível de
@@ -97,7 +97,7 @@ planejamento e gerência.
 O presente trabalho propõe um Sistema de Apoio à Decisão que auxilia o usuário
 a tomar decisões relacionadas à manutenção mecânica do seu carro.
 
-\subsection{Manutenção Automotiva}\label{sec:manutencao}
+\subsection{Manutenção Automotiva} \label{sec:manutencao}
 Para descobrir quais são os principais fatores que influenciam na frequência de
 manutenção de automóveis, foi feita uma busca nos manuais dos carros mais vendidos
 no Brasil em 2016 que, segundo a Federação Nacional da Distribuição de Veículos
@@ -129,10 +129,42 @@ tempo da troca normal.
 
 Para que a aplicação proposta detecte o momento certo para indicar ao usuário a
 necessidade de se fazer manutenção, são utilizados algoritmos de árvore de
-decisão e 
+decisão e polinomiais.
 
-\section{Algoritmos Utilizados} \label{sec:algoritmos}
+\section{Variáveis do Sistema e Algoritmos Utilizados} \label{sec:algoritmos}
+O Meu Possante tem o objetivo de auxiliar pessoas a manterem a manutenção do seu
+veículo em dia. Com base no referencial teórico pesquisado, as variáveis
+escolhidas para este sistema foram as seguintes:
 
+\begin{itemize}
+    \item Quilometragem do veículo
+    \item Tempo desde à última manutenção
+    \item Condições de uso do veículo
+\end{itemize}
+
+A informação de quilometragem será atualizada pelo usuário em intervalos
+regulares e estes dados serão utilizados junto com um algoritmo polinomial
+para predizer quando a quilometragem chegará em um determinado limiar. Essa
+informação, juntamente com os valores das outras variáveis, serão utilizadas
+para a montagem de uma árvore de decisão, que decidirá se é o momento certo de
+notificar o usuário sobre a manutenção de um determinado item.
+
+Nas próximas sessões são explicados com detalhes os algoritmos utilizados.
+
+\subsection{Árvore de Decisão}\label{sec:arvorededecisao}
+A árvore de decisão é uma estrutura utilizada principalmente na implementação de
+sistemas especialistas e em problemas de classificação. As árvores de decisão
+tomam como entrada uma situação descrita por um conjunto de atributos e retorna
+uma decisão, que é o valor predito para o valor de entrada \cite{russell2003}.
+
+Uma árvore de decisão é composta de nós de decisão e nós-folha. Um nó de decisão
+tem dois ou mais filhos, enquanto que um nó-folha representa uma classificação
+ou decisão. O nó do topo da árvore, ou raiz corresponde ao elemento que melhor
+classifica a informação em jogo. Árvores de decisão podem possuir tanto dados
+categóricos como numéricos.
+
+Árvores de decisão são atrativas por várias razões, entre elas a simplicidade,
+eficiência, flexibilidade e performance \cite{safavian1991survey}.
 
 \section{Modelagem do Sistema} \label{sec:modelagem}
 
