@@ -10,7 +10,7 @@
 
 \sloppy
 
-\title{Meu Possante: Um Aplicativo de Auxílio a Mecânica Automotiva}
+\title{Um Sistema de Apoio à Decisão para Auxílio na Mecânica Automotiva}
 
 \author{José Lucas dos S. Borges{\inst1}}
 
@@ -60,44 +60,13 @@ O uso de um aplicativo para celular pode ser uma grande ajuda na decisão de
 quando é necessário a revisão e troca de peças, alertando o usuário
 visualmente quando alguma manutenção está próxima.
 
-\section{Referencial Teórico} \label{sec:referencialteorico}
-Esta seção aborda os principais fundamentos teóricos envolvidos na notificação
-oportuna de motoristas, tema central deste trabalho. Aqui são discutidos os
-conceitos de SI e SAD e os principais fatores que influenciam na manutenção
-automotiva.
+% \section{Referencial Teórico} \label{sec:referencialteorico}
+% Esta seção aborda os principais fundamentos teóricos envolvidos na notificação
+% oportuna de motoristas, tema central deste trabalho. Aqui são discutidos os
+% conceitos de SI e SAD e os principais fatores que influenciam na manutenção
+% automotiva.
 
-\subsection{Sistemas de Informação e Sistemas de Apoio à Decisão} \label{sec:sisad}
-Segundo \citeonline{guimaraes2004sistema}, Sistemas de Informação podem ser definidos
-como todo conjunto de dados e informações que são organizados de forma
-integrada, com o objetivo de atender à demanda e antecipar as necessidades dos
-usuários.
-
-Segundo \citeonline{falsarella2004sistemas} os Sistemas de Informação podem ser
-separados em cinco categorias:
-
-\begin{itemize}
-    \item Sistemas Transacionais
-    \item Sistemas Gerenciais
-    \item Sistemas Executivos
-    \item Sistemas Especialistas
-    \item Sistemas de Apoio à Decisão
-\end{itemize}
-
-Os Sistemas de Apoio à Decisão, como definidos por \citeonline{o2001sistemas},
-são sistemas de informação computadorizados que fornecem aos gerentes apoio
-interativo de informações durante o processo de tomada de decisão.
-
-Bonczek, Holsapple e Whinston citados por \citeonline{neto2000modelo}, dizem que
-o SAD tem seu foco no gerenciamento com ênfase na flexibilidade e capacidade de
-fornecer respostas rápidas, podendo ser iniciado e controlado pelo responsável
-da tomada de decisões. Seus objetivos gerais são melhorar a eficácia, ou
-qualidade, da decisão e eficiência do processo de tomada de decisão em nível de
-planejamento e gerência.
-
-O presente trabalho propõe um Sistema de Apoio à Decisão que auxilia o usuário
-a tomar decisões relacionadas à manutenção mecânica do seu carro.
-
-\subsection{Manutenção Automotiva} \label{sec:manutencao}
+\section{Manutenção Automotiva} \label{sec:manutencao}
 Para descobrir quais são os principais fatores que influenciam na frequência de
 manutenção de automóveis, foi feita uma busca nos manuais dos carros mais vendidos
 no Brasil em 2016 que, segundo a Federação Nacional da Distribuição de Veículos
@@ -130,6 +99,37 @@ tempo da troca normal.
 Para que a aplicação proposta detecte o momento certo para indicar ao usuário a
 necessidade de se fazer manutenção, são utilizados algoritmos de árvore de
 decisão e polinomiais.
+
+\section{Sistemas de Informação e Sistemas de Apoio à Decisão} \label{sec:sisad}
+Segundo \citeonline{guimaraes2004sistema}, Sistemas de Informação podem ser definidos
+como todo conjunto de dados e informações que são organizados de forma
+integrada, com o objetivo de atender à demanda e antecipar as necessidades dos
+usuários.
+
+Segundo \citeonline{falsarella2004sistemas} os Sistemas de Informação podem ser
+separados em cinco categorias:
+
+\begin{itemize}
+    \item Sistemas Transacionais
+    \item Sistemas Gerenciais
+    \item Sistemas Executivos
+    \item Sistemas Especialistas
+    \item Sistemas de Apoio à Decisão
+\end{itemize}
+
+Os Sistemas de Apoio à Decisão, como definidos por \citeonline{o2001sistemas},
+são sistemas de informação computadorizados que fornecem aos gerentes apoio
+interativo de informações durante o processo de tomada de decisão.
+
+Bonczek, Holsapple e Whinston citados por \citeonline{neto2000modelo}, dizem que
+o SAD tem seu foco no gerenciamento com ênfase na flexibilidade e capacidade de
+fornecer respostas rápidas, podendo ser iniciado e controlado pelo responsável
+da tomada de decisões. Seus objetivos gerais são melhorar a eficácia, ou
+qualidade, da decisão e eficiência do processo de tomada de decisão em nível de
+planejamento e gerência.
+
+O presente trabalho propõe um Sistema de Apoio à Decisão que auxilia o usuário
+a tomar decisões relacionadas à manutenção mecânica do seu carro.
 
 \section{Variáveis do Sistema e Algoritmos Utilizados} \label{sec:algoritmos}
 O Meu Possante tem o objetivo de auxiliar pessoas a manterem a manutenção do seu
