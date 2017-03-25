@@ -5,6 +5,7 @@
 \usepackage[portuguese]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[alf]{abntcite}
+\usepackage{multirow}
 
 \urlstyle{rm}
 
@@ -128,6 +129,34 @@ da tomada de decisões. Seus objetivos gerais são melhorar a eficácia, ou
 qualidade, da decisão e eficiência do processo de tomada de decisão em nível de
 planejamento e gerência.
 
+\citeonline{kenneth2011sistemas} discorrem sobre os componentes de um SAD. Eles
+citam que seus principais componentes são um banco de dados, um software de
+sistema e uma interface de usuário.
+
+O banco de dados SAD é uma coletânea de dados correntes ou históricos
+proveniente de uma série de aplicações ou grupos. Pode ser, por exemplo, um
+pequeno banco de dados dentro de um computador com um subconjunto de dados
+carregados e possivelmente combinados com dados externos
+\cite{kenneth2011sistemas}.
+
+Um software de sistema SAD contém as ferramentas de software empregadas para
+análise de dados. Pode conter várias ferramentas diferentes ou um conjunto de
+modelos matemáticos e analíticos que pode ser disponibilizado para o usuário do
+SAD \cite{kenneth2011sistemas}.
+
+\citeonline{alter1980decision} classifica os SAD em sete tipos distintos,
+baseados em suas operações:
+
+\begin{itemize}
+  \item Sistemas de desenho de arquivos;
+  \item Sistemas de análise de dados;
+  \item Sistemas de análise de informações;
+  \item Modelos de contas;
+  \item Modelos de representação;
+  \item Modelos de otimização;
+  \item Modelos de sugestão;
+\end{itemize}
+
 O presente trabalho propõe um Sistema de Apoio à Decisão que auxilia o usuário
 a tomar decisões relacionadas à manutenção mecânica do seu carro.
 
@@ -136,11 +165,20 @@ O Meu Possante tem o objetivo de auxiliar pessoas a manterem a manutenção do s
 veículo em dia. Com base no referencial teórico pesquisado, as variáveis
 escolhidas para este sistema foram as seguintes:
 
-\begin{itemize}
-    \item Quilometragem do veículo
-    \item Tempo desde à última manutenção
-    \item Condições de uso do veículo
-\end{itemize}
+\begin{table}[h]
+\centering
+\resizebox{\textwidth}{!}{
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Variável}               & \textbf{Descrição}                                                                                  & \textbf{Referência}                                                                                     \\ \hline
+Quilometragem do veículo        & \begin{tabular}[c]{@{}c@{}}Quantidade (em KM) rodados\\ no total pelo veículo\end{tabular}          & \multirow{3}{*}{\begin{tabular}[c]{@{}c@{}}\\HYUNDAI, 2017;\\ CHEVROLET, 2017;\\ FORD, 2017\end{tabular}} \\ \cline{1-2}
+Tempo desde à última manutenção & \begin{tabular}[c]{@{}c@{}}Data em que foi feita a\\ última revisão da peça em questão\end{tabular} &                                                                                                         \\ \cline{1-2}
+Condições de uso do veículo     & \begin{tabular}[c]{@{}c@{}}Identifica se o uso do\\ veículo é severo ou não\end{tabular}            &                                                                                                         \\ \hline
+\end{tabular}
+}
+\caption{Quadro de variáveis utilizadas no sistema}
+\label{quadro-variaveis}
+\end{table}
 
 A informação de quilometragem será atualizada pelo usuário em intervalos
 regulares e estes dados serão utilizados junto com um algoritmo polinomial
