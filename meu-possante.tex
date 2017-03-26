@@ -237,14 +237,13 @@ severo no dia-a-dia, o que influencia na frequência de manutenção do automóv
 
 Finalmente, a partir da quilometragem atual indicada e da quilometragem que é
 rodada semanalmente, o aplicativo conseguirá predizer quando um determinado
-limiar será alcançado. Para melhorar ainda mais a precisão desta predição
+limiar será alcançado. Para melhorar ainda mais a precisão desta predição, o
+aplicativo notificará o usuário em intervalos regulares perguntando se a
+quilometragem predita para aquele momento está correta e pedindo para que seja
+corrigida caso não esteja. Estes dados serão utilizados junto com um algoritmo
+polinomial para melhorar a precisão.
 
-Após o usuário responder as perguntas, o aplicativo ficará monitorando
-
-A informação de quilometragem será atualizada pelo usuário em intervalos
-regulares e estes dados serão utilizados junto com um algoritmo polinomial
-para predizer quando a quilometragem chegará em um determinado limiar. Essa
-informação, juntamente com os valores das outras variáveis, serão utilizadas
+Essa informação, juntamente com os valores das outras variáveis, serão utilizadas
 para a montagem de uma árvore de decisão, que decidirá se é o momento certo de
 notificar o usuário sobre a manutenção de um determinado item.
 
@@ -281,7 +280,30 @@ valores já existentes. Com valores suficientes é possível construir uma curva
 e predizer um determinado valor. A curva se torna mais precisa com quanto mais
 valores forem informados.
 
-%\section{Modelagem do Sistema} \label{sec:modelagem}
+\section{Protótipo do Sistema}
+
+Nesta seção são apresentadas imagens de um protótipo do sistema.
+
+\begin{figure}[]
+\centering
+\includegraphics[width=0.3\textwidth]{tela1}
+\caption{Tela de configuração de quilometragem}
+\label{figura-quilometragem}
+\end{figure}
+
+\begin{figure}[]
+\centering
+\includegraphics[width=0.3\textwidth]{tela2}
+\caption{Tela principal do sistema}
+\label{figura-sistema}
+\end{figure}
+
+\begin{figure}[]
+\centering
+\includegraphics[width=0.3\textwidth]{tela3}
+\caption{Tela com informações das peças}
+\label{figura-componente}
+\end{figure}
 
 \bibliography{meu-possante}
 %\bibliographystyle{sbc}
