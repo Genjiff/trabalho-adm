@@ -215,7 +215,7 @@ e distribuído nas principais lojas de aplicativos existentes (Google Play, Appl
 AppStore, Windows Store).
 
 O primeiro passo após a instalação do aplicativo é o cadastro de informações.
-Serão feitas um total de 8 perguntas iniciais para o usuário, listadas na tabela
+Inicialmente, 8 perguntas serão feitas para o usuário, listadas na tabela
 \ref{perguntas}.
 
 \begin{table}[h]
@@ -229,6 +229,7 @@ Qual a marca do veículo?                                                       
 Qual o modelo do veículo?                                                                                                               & \begin{tabular}[c]{@{}c@{}}Lista com os modelos de veículos da marca\\ selecionada na pergunta anterior\end{tabular} \\ \hline
 Qual a quilometragem atual do veículo?                                                                                                  & Aberta                                                                                                               \\ \hline
 \begin{tabular}[c]{@{}c@{}}Aproximadamente, quantos quilômetros\\ o veículo roda por semana?\end{tabular}                               & Aberta                                                                                                               \\ \hline
+Quando foi feita a última revisão geral do veículo?                                                                                     & Data                                                                                                               \\ \hline
 \begin{tabular}[c]{@{}c@{}}O veículo funciona constantemente em tráfego urbano\\ lento, com paradas e partidas excessivas?\end{tabular} & Sim ou Não                                                                                                           \\ \hline
 \begin{tabular}[c]{@{}c@{}}O veículo faz viagens de curta distância\\ (menos de 2km) várias vezes ao dia?\end{tabular}                  & Sim ou Não                                                                                                           \\ \hline
 O veículo é utilizado como táxi ou similar?                                                                                             & Sim ou Não                                                                                                           \\ \hline
@@ -247,17 +248,45 @@ construído com uma base de dados que pode ser constantemente atualizada.
 As perguntas de resposta afirmativa/negativa, indicarão se o veículo possui uso
 severo no dia-a-dia, o que influencia na frequência de manutenção do automóvel.
 
-Finalmente, a partir da quilometragem atual indicada e da quilometragem que é
-rodada semanalmente, o aplicativo conseguirá predizer quando um determinado
-limiar será alcançado. Para melhorar ainda mais a precisão desta predição, o
-aplicativo notificará o usuário em intervalos regulares perguntando se a
-quilometragem predita para aquele momento está correta e pedindo para que seja
-corrigida caso não esteja. Estes dados serão utilizados junto com um algoritmo
-polinomial para melhorar a precisão.
+Finalmente, a partir da quilometragem atual indicada, da quilometragem que é
+rodada semanalmente e da data da última revisão geral, o aplicativo conseguirá
+predizer quando um determinado limiar será alcançado. Para melhorar ainda mais a
+precisão desta predição, o aplicativo notificará o usuário em intervalos
+regulares perguntando se a quilometragem predita para aquele momento está
+correta e pedindo para que seja corrigida caso não esteja. Estes dados serão
+utilizados junto com um algoritmo polinomial para melhorar a precisão.
 
 Essa informação, juntamente com os valores das outras variáveis, serão utilizadas
 para a montagem de uma árvore de decisão, que decidirá se é o momento certo de
 notificar o usuário sobre a manutenção de um determinado item.
+
+Após a notificação, o sistema dirá a média de preço da manutenção de todas as
+peças necessárias e o usuário poderá informar quanto ele deseja gastar. A partir
+dessa informação o sistema dirá quais as peças ele deve trocar, levando em conta
+a prioridade de manutenção de cada peça. As prioridades, definidas em pesquisa,
+com especialistas da área, estão definidas na tabela \ref{tabela-prioridade}:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+\textbf{Peça}               & \textbf{Prioridade de manutenção} \\ \hline
+Freios                      & Alta                              \\ \hline
+Motor                       & Alta                              \\ \hline
+Transmissão                 & Alta                              \\ \hline
+Troca de óleo               & Alta                              \\ \hline
+Pneus                       & Alta                              \\ \hline
+Arrefecimento               & Média                             \\ \hline
+Filtro de ar                & Média                             \\ \hline
+Filtro de combustível       & Média                             \\ \hline
+Elétrica                    & Média                             \\ \hline
+Alinhamento e balanceamento & Baixa                             \\ \hline
+Velas                       & Baixa                             \\ \hline
+Limpadores                  & Baixa                             \\ \hline
+\end{tabular}
+\caption{Tabela de prioridade da troca de peças}
+\label{tabela-prioridade}
+\end{table}
 
 Para que a aplicação proposta detecte o momento certo para indicar ao usuário a
 necessidade de se fazer manutenção, são utilizados algoritmos de árvore de
@@ -281,7 +310,8 @@ Uma árvore de decisão é composta de nós de decisão e nós-folha. Um nó de 
 tem dois ou mais filhos, enquanto que um nó-folha representa uma classificação
 ou decisão. O nó do topo da árvore, ou raiz corresponde ao elemento que melhor
 classifica a informação em jogo. Árvores de decisão podem possuir tanto dados
-categóricos como numéricos.
+categóricos como numéricos. Um exemplo de árvore de decisão é apresentado na
+figura \ref{arvorededecisao}.
 
 Árvores de decisão são atrativas por várias razões, entre elas a simplicidade,
 eficiência, flexibilidade e performance \cite{safavian1991survey}.
@@ -296,25 +326,11 @@ valores forem informados.
 
 Nesta seção são apresentadas imagens de um protótipo do sistema.
 
-\begin{figure}[]
+\begin{figure}[h]
 \centering
-\includegraphics[width=0.3\textwidth]{tela1}
-\caption{Tela de configuração de quilometragem}
+\includegraphics[width=0.7\textwidth]{telas}
+\caption{Telas do aplicativo}
 \label{figura-quilometragem}
-\end{figure}
-
-\begin{figure}[]
-\centering
-\includegraphics[width=0.3\textwidth]{tela2}
-\caption{Tela principal do sistema}
-\label{figura-sistema}
-\end{figure}
-
-\begin{figure}[]
-\centering
-\includegraphics[width=0.3\textwidth]{tela3}
-\caption{Tela com informações das peças}
-\label{figura-componente}
 \end{figure}
 
 \bibliography{meu-possante}
